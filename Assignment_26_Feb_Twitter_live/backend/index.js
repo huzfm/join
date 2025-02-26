@@ -9,8 +9,9 @@ const port = 3000;
 // Middleware to parse JSON request bodies
 app.use(express.json());
 app.use(cors({
-      origin: 'https://join-py24.vercel.app/',  // Frontend URL
-}))
+      origin: '*',  // Allow all origins
+}));
+
 
 // Read the book data from books.json
 const getBooksData = () => {
