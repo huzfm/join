@@ -10,7 +10,7 @@ const StatisticsPage = () => {
       useEffect(() => {
             const fetchStatistics = async () => {
                   try {
-                        const response = await fetch('http://localhost:3000/statistics');
+                        const response = await fetch('https://join-w15c.vercel.app/statistics');
                         const data = await response.json();
                         setStatistics(data);
                   } catch (error) {

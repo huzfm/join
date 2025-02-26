@@ -9,7 +9,7 @@ const BookDetail = () => {
 
       useEffect(() => {
             const fetchBook = async () => {
-                  const response = await fetch(`http://localhost:3000/books/${id}`);
+                  const response = await fetch(`https://join-w15c.vercel.app/books/${id}`);
                   const data = await response.json();
                   setBook(data);
             };

@@ -9,7 +9,9 @@ const BookList = () => {
       useEffect(() => {
             const fetchBooks = async () => {
                   setLoading(true);
-                  const response = await fetch(`http://localhost:3000/books?genre=${genre}`);
+                  const response = await fetch(`https://join-w15c.vercel.app/books?genre=${genre}`);
+                  // const response = await fetch(`${process.env.REACT_APP_API_URL}/books?genre=${genre}`);
+
                   const data = await response.json();
                   setBooks(data);
                   console.log(data);
